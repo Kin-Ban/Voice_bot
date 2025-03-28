@@ -68,3 +68,5 @@ Our AI-Powered Voice Assistant is hosted on Hugging Face Spaces and is ready for
 5 Review Conversation History:
   * The interface maintains a complete log of your interactions, enabling you to review both your queries and the assistant’s responses at any time.
 
+![image](https://github.com/user-attachments/assets/e048ecad-8472-4075-bab8-4663653cee19)
+Fig: Flow diagram of the system
