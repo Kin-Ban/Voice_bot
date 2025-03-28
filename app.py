@@ -76,7 +76,7 @@ st.title("AI-Powered Voice Assistant")
 
 # Display the assistant image at the top of the interface
 st.image(
-    "G:/Downloads/camp_lift_project/DALL·E 2025-03-28 01.12.31 - A futuristic AI-powered voice assistant interface for Home.LLC, featuring a sleek and modern chatbot avatar with a home icon subtly integrated into it.webp",
+    "DALL·E 2025-03-28 01.12.31 - A futuristic AI-powered voice assistant interface for Home.LLC, featuring a sleek and modern chatbot avatar with a home icon subtly integrated into it.webp",
     use_container_width=True
 )
 
@@ -146,7 +146,7 @@ def process_command(audio_data):
         return ""
 
 # Load knowledge base from file
-knowledge_base_file = r"G:\Downloads\camp_lift_project\kinjal_knowledge base.txt"
+knowledge_base_file = "kinjal_knowledge base.txt"
 with open(knowledge_base_file, "r") as f:
     knowledge_base_content = f.read()
 
