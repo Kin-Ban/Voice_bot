@@ -1,3 +1,7 @@
+Q: Who is the developer, and how did he develop the application?
+ The developer is Kinjal Bandopadhyay, a data scientist with a background in physics and a Master's in Data Science, developed the application using Streamlit, an open-source Python framework for building interactive data apps. By leveraging Streamlit's simple API, he transformed data scripts into a shareable web application, incorporating interactive widgets and visualizations to enhance user engagement. The app was then deployed using Huggingface spaces, making it accessible via a shareable link. 
+
+
 Q: What should we know about your life story in a few sentences?
  I’m a data scientist with a robust background in physics and a Master’s in Data Science. I specialize in LLMs, NLP, and generative AI, while also excelling in deep learning, SQL, and cloud-based solutions. As a Generative AI Engineer intern at Decision Point, I continuously refine my skills in agentic AI and multimodal systems, driving innovation in every complex project I tackle.
 
