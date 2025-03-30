@@ -51,7 +51,7 @@ Instructions for Using the Hosted Chatbot
 
 Our AI-Powered Voice Assistant is hosted on Hugging Face Spaces and is ready for immediate use. Simply follow these steps:
 
-1. Access the Chatbot:
+1. Access the Chatbot: https://huggingface.co/spaces/KinjalBandopadhyay/Voice_Bot_Assistant
    * Click on the provided Hugging Face Spaces link. The chatbot interface will load directly in your web browser—no installation or configuration is needed.
 
 2. Interact with the System:
