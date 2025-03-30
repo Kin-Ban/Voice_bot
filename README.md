@@ -4,6 +4,7 @@ Overview
 Our AI-Powered Voice Assistant is a next-generation interactive solution designed to understand and respond to user inquiries through natural, conversational dialogue. Built with advanced artificial intelligence and speech processing technologies, this system allows users—regardless of technical expertise—to simply speak or upload an audio file and receive clear, context-aware responses. Whether for customer service, technical support, or everyday productivity, this voice assistant offers an intuitive and engaging experience that enhances communication and streamlines interactions.
 
 Approach followed
+
 How It Works :
 
 1. Audio Input:
@@ -29,6 +30,7 @@ How It Works :
    assistant “speaks” back to the user, making the interaction as close to a real conversation as possible.
    
 Design Decisions
+
 Our AI-Powered Voice Assistant is architected with scalability, usability, and versatility at its core. We chose Streamlit as the front-end framework for its rapid development capabilities and ease of creating interactive UIs, ensuring that even non-technical users can engage with the system effortlessly. Key design decisions include:
 
 * State Management & Conversation History: We utilize Streamlit’s session state to manage ongoing and archived conversations. This allows users to revisit previous 
@@ -46,6 +48,7 @@ Our AI-Powered Voice Assistant is architected with scalability, usability, and v
 This intelligent fusion of generative AI and retrieval-based methods ensures that our assistant delivers personalized, context-aware responses that are both conversational and informative, making it a compelling solution for customer engagement and support.
 
 Instructions for Using the Hosted Chatbot
+
 Our AI-Powered Voice Assistant is hosted on Hugging Face Spaces and is ready for immediate use. Simply follow these steps:
 
 1. Access the Chatbot:
