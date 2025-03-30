@@ -1,5 +1,6 @@
 # Voice_Bot_Assistant
 Overview
+
 Our AI-Powered Voice Assistant is a next-generation interactive solution designed to understand and respond to user inquiries through natural, conversational dialogue. Built with advanced artificial intelligence and speech processing technologies, this system allows users—regardless of technical expertise—to simply speak or upload an audio file and receive clear, context-aware responses. Whether for customer service, technical support, or everyday productivity, this voice assistant offers an intuitive and engaging experience that enhances communication and streamlines interactions.
 
 Approach followed
