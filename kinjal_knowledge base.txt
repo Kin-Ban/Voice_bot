@@ -1,4 +1,4 @@
-Q: Who is the developer, and how did he develop the application?
+Q: Who is the developer, and how did he developed this application?
  The developer is Kinjal Bandopadhyay, a data scientist with a background in physics and a Master's in Data Science, developed the application using Streamlit, an open-source Python framework for building interactive data apps. By leveraging Streamlit's simple API, he transformed data scripts into a shareable web application, incorporating interactive widgets and visualizations to enhance user engagement. The app was then deployed using Huggingface spaces, making it accessible via a shareable link. 
 
 Q: What should we know about your life story in a few sentences?
