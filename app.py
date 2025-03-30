@@ -76,7 +76,7 @@ st.title("AI-Powered Voice Assistant")
 
 # Display the assistant image at the top of the interface
 st.image(
-    "DALL·E 2025-03-28 01.12.31 - A futuristic AI-powered voice assistant interface for Home.LLC, featuring a sleek and modern chatbot avatar with a home icon subtly integrated into it.webp",
+    "G:/Downloads/camp_lift_project/DALL·E 2025-03-28 01.12.31 - A futuristic AI-powered voice assistant interface for Home.LLC, featuring a sleek and modern chatbot avatar with a home icon subtly integrated into it.webp",
     use_container_width=True
 )
 
@@ -100,7 +100,7 @@ whisper_model = WhisperModel(
 )
 
 # Gemini setup
-genai.configure(api_key="AIzaSyA_dHI1lZ-nWo")
+genai.configure(api_key="AIzaSyA_dHI1lZ-nWoMrEpnQu6FF6qruOQjpopc")
 if "convo" not in st.session_state or st.session_state.convo is None:
     st.session_state.convo = genai.GenerativeModel("gemini-2.0-flash").start_chat(history=[])
 system_message = '''Instructions: You are an advanced AI voice assistant, you are being used to power a voice assistant and should response as so.Your responses must be highly intelligent, well-structured, and concise. Prioritize clarity, logic, and factual accuracy.
@@ -146,7 +146,7 @@ def process_command(audio_data):
         return ""
 
 # Load knowledge base from file
-knowledge_base_file = "kinjal_knowledge base.txt"
+knowledge_base_file = r"G:\Downloads\camp_lift_project\kinjal_knowledge base.txt"
 with open(knowledge_base_file, "r") as f:
     knowledge_base_content = f.read()
 
@@ -177,7 +177,7 @@ st.markdown('<div class="fixed-bottom">', unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 
 # "Activate Voice Assistant" button
-if col1.button("🔊 Activate Voice Assistant"):
+if col1.button("🔊 Voice Assistant: What can i help with?"):
     st.write("✅ Activated! Speak your command:")
     with microphone as source:
         recognizer.adjust_for_ambient_noise(source)
@@ -199,7 +199,8 @@ if col1.button("🔊 Activate Voice Assistant"):
             st.error(f"An error occurred: {e}")
 
 # "Know about me?" button with voice input
-if col2.button("Know about the developer?"):
+# "Know about the developer?" button with voice input
+if col2.button("🔊 Voice Assistant: Know about the developer?"):
     st.write("🎤 Listening for your question...")
     with microphone as source:
         recognizer.adjust_for_ambient_noise(source)
@@ -209,13 +210,23 @@ if col2.button("Know about the developer?"):
             if user_input:
                 st.write(f"👤 You: {user_input}")
                 st.session_state.current_conversation.append(f"User: {user_input}")
-                answer = search_data(user_input)
-                if answer:
-                    st.write(f"🤖 Assistant: {answer}")
-                    st.session_state.current_conversation.append(f"Assistant: {answer}")
-                    threading.Thread(target=speak, args=(answer,), daemon=True).start()
+                # Retrieve initial answer from the knowledge base
+                kb_answer = search_data(user_input)
+                # Construct a refined prompt for the LLM using both the user query and KB info
+                refined_prompt = (
+                    f"User Query: {user_input}\n"
+                    f"Knowledge Base Data: {kb_answer}\n\n"
+                    "Please generate a creative, comprehensive, and highly professional response that is well-structured and impressive. "
+                    "If the knowledge base does not contain relevant information, simply state: 'Information is not present in the knowledge base.'"
+                )
+
+                refined_answer = st.session_state.convo.send_message(refined_prompt).text
+                if refined_answer:
+                    st.write(f"🤖 Assistant: {refined_answer}")
+                    st.session_state.current_conversation.append(f"Assistant: {refined_answer}")
+                    threading.Thread(target=speak, args=(refined_answer,), daemon=True).start()
                 else:
-                    st.write("❌ I couldn't find an answer to your question.")
+                    st.write("❌ I couldn't generate a refined answer.")
             else:
                 st.write("❌ No input detected. Please try again.")
         except sr.WaitTimeoutError:
