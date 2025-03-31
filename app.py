@@ -100,7 +100,7 @@ whisper_model = WhisperModel(
 )
 
 # Gemini setup
-genai.configure(api_key="AIzaSyA_dHI1lZ-nWoMrEpnQu6FF6qruOQjpopc")
+genai.configure(api_key="AIzaSyA_dHI1lZ-nWoMrEpnQupc")
 if "convo" not in st.session_state or st.session_state.convo is None:
     st.session_state.convo = genai.GenerativeModel("gemini-2.0-flash").start_chat(history=[])
 system_message = '''Instructions: You are an advanced AI voice assistant, you are being used to power a voice assistant and should response as so.Your responses must be highly intelligent, well-structured, and concise. Prioritize clarity, logic, and factual accuracy.
